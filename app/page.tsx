@@ -1,8 +1,14 @@
+import Hero from "@/components/Hero";
+import Highlights from "@/components/Highlights";
+import Navbar from "@/components/Navbar";
+
 const Home = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <h1 className="text-4xl font-bold">Home Page</h1>
-    </div>
+    <main className="bg-black">
+      <Navbar />
+      <Hero />
+      <Highlights />
+    </main>
   );
 };
 
