@@ -5,7 +5,7 @@ import {
   View,
 } from "@react-three/drei";
 import Lights from "./Lights";
-import Iphone from "./Iphone";
+import Iphone from "./IPhone";
 import { Suspense } from "react";
 
 import * as THREE from "three";
@@ -15,7 +15,7 @@ interface ModelViewProps {
   groupRef: any;
   gsapType: string;
   controlRef: any;
-  setRotation: (value: number) => void;
+  setRotation: any;
   item: {
     title: string;
     color: string[];
