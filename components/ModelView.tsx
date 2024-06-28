@@ -4,7 +4,7 @@ import {
   View,
 } from "@react-three/drei";
 import Lights from "./Lights";
-import Iphone from "./IPhone";
+import IPhone from "./IPhone";
 import { Suspense } from "react";
 
 import * as THREE from "three";
@@ -65,7 +65,7 @@ const ModelView = ({
             <Loader />
           }
         >
-          <Iphone
+          <IPhone
             scale={index === 1 ? [15, 15, 15] : [17, 17, 17]}
             item={item}
             size={size}
