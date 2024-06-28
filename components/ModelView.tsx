@@ -9,7 +9,7 @@ import { Suspense } from "react";
 
 import * as THREE from "three";
 import Loader from "./Loader";
-import Model from "./IPhone";
+import IphoneModel from "./IPhone";
 
 interface ModelViewProps {
   index: number;
@@ -66,7 +66,7 @@ const ModelView = ({
             <Loader />
           }
         >
-          <Model
+          <IphoneModel
             scale={index === 1 ? [15, 15, 15] : [17, 17, 17]}
             item={item}
             size={size}
