@@ -1,5 +1,4 @@
 import {
-  Html,
   OrbitControls,
   PerspectiveCamera,
   View,
@@ -40,7 +39,7 @@ const ModelView = ({
       className={`w-full h-full absolute ${index === 2 && "right-[-100%]"}`}
     >
       {/* Ambient Light */}
-      <ambientLight intensity={0. 3} />
+      <ambientLight intensity={0.3} />
 
       <PerspectiveCamera makeDefault position={[0, 0, 4]} />
 
