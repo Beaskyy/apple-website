@@ -6,21 +6,26 @@ import gsap from "gsap";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
-  const [videoSrc, setVideoSrc] = useState(
-    window.innerWidth < 760 ? smallHeroVideo : heroVideo
-  );
+  const [videoSrc, setVideoSrc] = useState("");
 
   const handleVideoSrcSet = () => {
-    if (window.innerWidth < 760) {
-      setVideoSrc(smallHeroVideo);
-    } else {
-      setVideoSrc(heroVideo);
+    if (typeof window !== "undefined") {
+      if (window.innerWidth < 760) {
+        setVideoSrc(smallHeroVideo);
+      } else {
+        setVideoSrc(heroVideo);
+      }
     }
   };
 
   useEffect(() => {
+    // Set initial video source when component mounts
+    handleVideoSrcSet();
+
+    // Add event listener for window resize
     window.addEventListener("resize", handleVideoSrcSet);
 
+    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleVideoSrcSet);
     };
@@ -35,9 +40,10 @@ const Hero = () => {
     gsap.to("#cta", {
       opacity: 1,
       delay: 2,
-      y: -50
+      y: -50,
     });
   }, []);
+
   return (
     <section className="w-full nav-height bg-black relative">
       <div className="h-5/6 w-full flex-center flex-col">
