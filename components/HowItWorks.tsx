@@ -40,7 +40,7 @@ const HowItWorks = () => {
             <br /> A monster win for gaming.
           </h2>
           <p className="hiw-subtitle">
-            It's here. The biggest redesign in the history of Apple GPUs.
+            It&apos;s here. The biggest redesign in the history of Apple GPUs.
           </p>
         </div>
         <div className="mt-10 md:mt-20 mb-14">
